@@ -18,6 +18,6 @@ Route::get('/', function () {
 });
 
 //タスク一覧のルート設定
-//version8以上はAppから書ていてルート設定を実施。
+//version8以上はAppから書いてルート設定を実施。
 Route::get('/folders/{id}/tasks', 'App\Http\Controllers\TaskController@index')->name('tasks.index');
 
