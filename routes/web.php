@@ -20,3 +20,7 @@ Route::get('/', function () {
 //タスク一覧のルート設定
 //version8以上はAppから書いてルート設定を実施。
 Route::get('/folders/{id}/tasks', 'App\Http\Controllers\TaskController@index')->name('tasks.index');
+
+//フォルダ作成(create)のルート設定
+Route::get('/folders/create', 'App\Http\Controllers\FolderController@showCreateForm')->name('folders.create');
+Route::post('/folders/create', 'App\Http\Controllers\FolderController@create');
