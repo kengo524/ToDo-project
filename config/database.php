@@ -63,6 +63,13 @@ return [
             ]) : [],
         ],
 
+        //テスト実行時のみ存在するDBの設定(mysql用)
+        'mysql_testing' => [
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+            'prefix' => '',
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
